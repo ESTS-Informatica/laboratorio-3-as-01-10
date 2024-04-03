@@ -14,6 +14,12 @@ public class AirTransportation extends Transport{
     }
 
     @Override
+    public double getPriceWithFees(){
+        return super.getPrice() * (1.0 + (getFees() * 0.01));
+    }
+
+
+    @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
 
